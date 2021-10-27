@@ -14,10 +14,10 @@ let server = app.listen(port, () => {
 
 let io = socket(server);
 io.on("connection", (socket) => {
-  cors: {
-    origin: "http://localhost:4200";
-    methods: ["GET", "POST"];
-  }
+  // cors: {
+  //   origin: "http://localhost:4200";
+  //   methods: ["GET", "POST"];
+  // }
   console.log("made socket connection");
   socket.on("beginPath", (data) => {
     io.sockets.emit("beginPath", data);
